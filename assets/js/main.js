@@ -77,6 +77,18 @@
 				enter:		function() { $header.addClass('alt'); },
 				leave:		function() { $header.removeClass('alt'); }
 			});
+	
+	
+
+			// Events.
+			// Note: If you're *not* using AJAX, get rid of this event listener.
+				$form.addEventListener('click', function(event) {
+
+					console.log('sending analytics event');
+					ga('send', 'event', 'Landing Page Botón', 'Click', 'try it');
+
+					event.stopPropagation();
+					event.preventDefault();
 
 		}
 
